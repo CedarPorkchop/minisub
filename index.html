@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mini Sub AR</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar-nft.js"></script>
+    <style>
+      body { margin: 0; overflow: hidden; }
+    </style>
+  </head>
+  <body>
+    <a-scene embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
+      
+      <!-- QR code marker (replace with your .patt file once generated) -->
+      <a-marker type="pattern" url="pattern-minisub_QR.patt">
+        <!-- Your 3D model -->
+        <a-entity 
+          gltf-model="https://raw.githubusercontent.com/cedarporkchop/minisub-ar/main/mini_sub.glb"
+          scale="0.5 0.5 0.5"
+          rotation="0 0 0"
+          position="0 0 0">
+        </a-entity>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
