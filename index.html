@@ -10,14 +10,14 @@
     </style>
   </head>
   <body>
-    <a-scene embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
+    <a-scene embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix;">
       
       <!-- QR code marker (replace with your .patt file once generated) -->
       <a-marker type="pattern" url="pattern-minisub_QR.patt">
         <!-- Your 3D model -->
         <a-entity 
           gltf-model="https://raw.githubusercontent.com/cedarporkchop/minisub/main/mini_sub.glb"
-          scale="0.5 0.5 0.5"
+          scale="0.8 0.8 0.8"
           rotation="0 0 0"
           position="0 0 0">
         </a-entity>
@@ -27,4 +27,5 @@
     </a-scene>
   </body>
 </html>
+
 
